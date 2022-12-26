@@ -36,7 +36,7 @@ int adc_log(void) {
  */
 
 int main() {
-  cout << "Hello Fluid-Dev!" << endl;
+  cout << "Hello C++ Template!" << endl;
 
   adc_log();
 

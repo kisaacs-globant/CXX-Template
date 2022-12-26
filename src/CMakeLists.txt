@@ -1,1 +1,1 @@
-add_executable (fluid_dev main.cpp)
+add_executable (cxx_app main.cpp)

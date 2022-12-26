@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.18)
 
-project(FLUID_DEV)
+project(CXX_PROJECT)
 
 ### C++
 enable_language(CXX)
