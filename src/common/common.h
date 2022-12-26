@@ -11,6 +11,7 @@ public:
     ~common() {}
 
     int talk(void);
+    int add(int a, int b);
 
 private:
 

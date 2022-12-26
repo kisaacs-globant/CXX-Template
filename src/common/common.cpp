@@ -14,3 +14,5 @@ int common::talk(void) {
   std::cout << "hello!" << std::endl;
   return 0;
 }
+
+int common::add(int a, int b) { return a + b; }
