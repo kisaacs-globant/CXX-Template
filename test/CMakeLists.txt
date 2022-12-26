@@ -9,9 +9,6 @@ include_directories(
   
 set(Sources 
   main_test.cpp
-  ringbuffer_test.cpp
-  ringcounter_test.cpp
-  fdm_test.cpp
 )
 
 ## Testing 
