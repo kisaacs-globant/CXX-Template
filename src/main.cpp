@@ -4,9 +4,10 @@
  *    @author rouxfederico@gmail.com
  */
 
+#include <common.h>
+
 #include <cassert>
 #include <iostream>
-
 using namespace std;
 
 /**
@@ -14,7 +15,12 @@ using namespace std;
  *   @brief main program
  */
 
-int main(int argc, char*argv[]) {
+int main(void) {
+  common c;
+
   cout << "Hello C++ Template!" << endl;
+
+  c.talk();
+
   return 0;
 }

@@ -12,13 +12,5 @@ set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} -W -Wall -Wextra -Werror -std=c++11")
 
 set(SRC_DIR src)
 
-include_directories(
-  ${CMAKE_SOURCE_DIR}/${SRC_DIR}/ringbuffer
-  ${CMAKE_SOURCE_DIR}/${SRC_DIR}/fdm
-  ${CMAKE_SOURCE_DIR}/${SRC_DIR}/common
-  ${CMAKE_SOURCE_DIR}/${SRC_DIR}/encoder
-)
-
-
 add_subdirectory(src)
 add_subdirectory(test)
