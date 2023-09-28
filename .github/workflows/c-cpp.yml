@@ -17,8 +17,14 @@ jobs:
     - name: install needed packages
       run: apt-get update && apt install -y build-essential cmake doxygen graphviz clang clang-format git
     - name: script
-      run: cd scrip
+      run: cd scripts
     - name: install dependencies
       run: ./install-catch2.sh
     - name: build 
       run: build-all.sh
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.3
+      with:
+        name: test_suite
+        path: build/test/test_suite
+        retention-days: 1 optional
