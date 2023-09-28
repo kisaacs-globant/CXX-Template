@@ -12,13 +12,13 @@ jobs:
     #runs-on: ubuntu-latest
     #runs-on: debian:bullseye-slim
     runs-on: [self-hosted, linux]
-
+    defaults:
+      run:
+        working-directory: ./scripts
     steps:
     - uses: actions/checkout@v3
 #    - name: install needed packages
 #      run: apt-get update && apt install -y build-essential cmake doxygen graphviz clang clang-format git
-    - name: script
-      run: cd scripts
     - name: install dependencies
       run: ./install-catch2.sh
     - name: build 
