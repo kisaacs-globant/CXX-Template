@@ -1,0 +1,24 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "develop" ]
+  pull_request:
+    branches: [ "develop" ]
+
+jobs:
+  build:
+
+    #runs-on: ubuntu-latest
+    runs-on: debian:bullseye-slim
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: install needed packages
+      run: apt-get update && apt install -y build-essential cmake doxygen graphviz clang clang-format git
+    - name: script
+      run: cd scrip
+    - name: install dependencies
+      run: ./install-catch2.sh
+    - name: build 
+      run: build-all.sh
