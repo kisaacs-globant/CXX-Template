@@ -12,9 +12,9 @@ jobs:
     #runs-on: ubuntu-latest
     #runs-on: debian:bullseye-slim
     runs-on: [self-hosted, linux]
-        container:
+    container:
       # Runner docker image
-    image: debian:bullseye-slim
+      image: debian:bullseye-slim
 #    defaults:
 #      run:
 #        working-directory: ./scripts
