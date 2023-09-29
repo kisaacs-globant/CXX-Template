@@ -31,7 +31,7 @@ jobs:
       run: ./install-catch2.sh
     - name: build
       working-directory: ./scripts
-      run: build-all.sh
+      run: ./build-all.sh
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.3
       with:
