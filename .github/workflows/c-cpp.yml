@@ -14,14 +14,14 @@ jobs:
     runs-on: [self-hosted, linux]
     container:
       # Runner docker image
-      image: ubuntu:22.04
+      image: bitnami/git
 #    defaults:
 #      run:
 #        working-directory: ./scripts
     steps:
     - uses: actions/checkout@v3
       with:
-        submodules: true
+        submodules: recursive
     - name: install needed packages
       run: apt-get update && apt install -y build-essential cmake doxygen graphviz clang clang-format git
 #    - name: Checkout submodules due to github thing
