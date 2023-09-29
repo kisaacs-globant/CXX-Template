@@ -20,12 +20,12 @@ jobs:
 #        working-directory: ./scripts
     steps:
     - uses: actions/checkout@v3
-#      with:
-#        submodules: recursive
+      with:
+        submodules: recursive
     - name: install needed packages
       run: apt-get update && apt install -y build-essential cmake doxygen graphviz clang clang-format git
-    - name: Checkout submodules due to github thing
-      run: git submodule update --init --recursive
+#    - name: Checkout submodules due to github thing
+#      run: git submodule update --init --recursive
     - name: install dependencies
       working-directory: ./scripts
       run: ./install-catch2.sh
