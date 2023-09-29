@@ -12,16 +12,18 @@ jobs:
     #runs-on: ubuntu-latest
     #runs-on: debian:bullseye-slim
     runs-on: [self-hosted, linux]
-    defaults:
-      run:
-        working-directory: ./scripts
+#    defaults:
+#      run:
+#        working-directory: ./scripts
     steps:
     - uses: actions/checkout@v3
 #    - name: install needed packages
 #      run: apt-get update && apt install -y build-essential cmake doxygen graphviz clang clang-format git
     - name: install dependencies
+      working-directory: ./scripts
       run: ./install-catch2.sh
-    - name: build 
+    - name: build
+      working-directory: ./scripts
       run: build-all.sh
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.3
