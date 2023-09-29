@@ -12,6 +12,9 @@ jobs:
     #runs-on: ubuntu-latest
     #runs-on: debian:bullseye-slim
     runs-on: [self-hosted, linux]
+        container:
+      # Runner docker image
+    image: debian:bullseye-slim
 #    defaults:
 #      run:
 #        working-directory: ./scripts
@@ -19,8 +22,8 @@ jobs:
     - uses: actions/checkout@v3
       with:
         submodules: recursive
-#    - name: install needed packages
-#      run: apt-get update && apt install -y build-essential cmake doxygen graphviz clang clang-format git
+    - name: install needed packages
+      run: apt-get update && apt install -y build-essential cmake doxygen graphviz clang clang-format git
     - name: install dependencies
       working-directory: ./scripts
       run: ./install-catch2.sh
